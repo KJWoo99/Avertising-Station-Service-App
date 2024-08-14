@@ -1,50 +1,60 @@
-# 광고 문구 서비스 앱
+Certainly! Here's a polished and visually appealing version of your `README.md`:
 
-이 프로젝트는 OpenAI의 GPT-3.5 모델을 사용하여 제품에 대한 광고 문구를 생성하고, 생성된 문구를 MongoDB에 저장하며, Streamlit을 통해 사용자 인터페이스를 제공하는 웹 애플리케이션입니다.
+---
 
-## 주요 기능
+# Ad Copy Generation Service App
 
-1. 광고 문구 생성: 제품 이름, 주요 내용, 광고 문구의 느낌을 입력받아 AI 기반의 광고 문구를 생성합니다.
-2. 데이터베이스 저장: 생성된 광고 문구를 MongoDB에 저장합니다.
-3. 저장된 광고 조회: 이전에 생성된 광고 문구를 제품별로 조회할 수 있습니다.
-4. 광고 삭제: 저장된 광고 문구를 삭제할 수 있습니다.
+Welcome to the Ad Copy Generation Service App! This web application leverages OpenAI's GPT-3.5 model to craft compelling ad copies for your products. With seamless integration between Streamlit, FastAPI, and MongoDB, you can effortlessly generate, store, and manage your ad content.
 
-## 기술 스택
+## 🌟 Key Features
 
-- Frontend: Streamlit
-- Backend: FastAPI
-- Database: MongoDB
-- AI Model: OpenAI GPT-3.5
+- **Ad Copy Generation**: Input the product name, key details, and desired tone to generate unique ad copies using AI.
+- **Database Storage**: Automatically save your generated ad copies to MongoDB for future use.
+- **Retrieve Stored Ads**: Easily access previously created ad copies organized by product.
+- **Delete Ads**: Manage your ad copies by deleting any that are no longer needed.
 
-## 파일 구조
+## 🔧 Tech Stack
 
-- `app.py`: Streamlit을 사용한 프론트엔드 애플리케이션
-- `main.py`: FastAPI를 사용한 백엔드 서버
+- **Frontend**: [Streamlit](https://streamlit.io/)
+- **Backend**: [FastAPI](https://fastapi.tiangolo.com/)
+- **Database**: [MongoDB](https://www.mongodb.com/)
+- **AI Model**: [OpenAI GPT-3.5](https://openai.com/api/)
 
-## 설치 및 실행 방법
+## 🗂 File Structure
 
-1. 필요한 라이브러리 설치:
-pip install streamlit pymongo requests fastapi openai
-Copy
-2. 환경 변수 설정:
-- `MONGO_URL`: MongoDB 연결 URL
-- `OPENAI_API_KEY`: OpenAI API 키
+- `app.py`: Frontend application built with Streamlit.
+- `main.py`: Backend server implemented using FastAPI.
 
-3. 백엔드 서버 실행:
-uvicorn main:app --reload
-Copy
-4. 프론트엔드 애플리케이션 실행:
-streamlit run app.py
-Copy
-## 사용 방법
+## 🚀 Installation and Setup
 
-1. 웹 브라우저에서 Streamlit 앱에 접속합니다.
-2. 제품 이름, 주요 내용을 입력하고 광고 문구의 느낌을 선택합니다.
-3. "광고 문구 생성하기" 버튼을 클릭하여 광고 문구를 생성합니다.
-4. 생성된 광고 문구는 자동으로 MongoDB에 저장됩니다.
-5. 사이드바에서 저장된 광고 문구를 제품별로 조회하고 삭제할 수 있습니다.
+1. **Install Required Libraries**:
+   ```bash
+   pip install streamlit pymongo requests fastapi openai
+   ```
 
-## 주의사항
+2. **Set Environment Variables**:
+   - `MONGO_URL`: Your MongoDB connection URL.
+   - `OPENAI_API_KEY`: Your OpenAI API key.
 
-- 이 애플리케이션은 OpenAI API를 사용하므로, API 사용량과 관련된 비용에 주의해야 합니다.
-- MongoDB 연결 URL과 OpenAI API 키는 보안을 위해 환경 변수로 관리해야 합니다.
+3. **Run the Backend Server**:
+   ```bash
+   uvicorn main:app --reload
+   ```
+
+4. **Run the Frontend Application**:
+   ```bash
+   streamlit run app.py
+   ```
+
+## 🛠 Usage
+
+1. Open your browser and navigate to the Streamlit app.
+2. Input the product name, key details, and select the desired tone for the ad copy.
+3. Click the "Generate Ad Copy" button to create your ad copy.
+4. The generated ad copy will be saved automatically in MongoDB.
+5. Use the sidebar to view and delete stored ad copies by product.
+
+## ⚠️ Notes
+
+- This application utilizes the OpenAI API, so please be aware of potential costs associated with API usage.
+- For security, ensure that your MongoDB connection URL and OpenAI API key are managed as environment variables.
